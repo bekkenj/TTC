@@ -1,0 +1,47 @@
+﻿extends layout
+block content
+  .wrap
+    .container-fluid
+        .row
+            .col-xs-12.col-sm-12
+                h1 Knights of the Slightly-Oval Table
+        .row
+            .col-xs-4.col-sm-4
+                div(id ='nameLbl' class="form-control input-lg") <b>Character Name:</b>
+            .col-xs-4.col-sm-4
+                input(type="text" id="character" class="form-control input-lg" placeholder="-Name-" rows="3")  
+            .col-xs-4.col-sm-4
+                button#name-generate.btn.btn-primary.btn-lg.btn-block Generate Random
+        .row
+            .col-xs-4.col-sm-4
+                div(id ='nameLbl' class="form-control input-lg") 
+            .col-xs-4.col-sm-4
+                div(id ='nameLbl' class="form-control input-lg") 
+            .col-xs-2.col-sm-2
+                select(id="die-type" class="form-control input-lg")
+                    option d4
+                    option d6
+                    option d8
+                    option d10
+                    option d12
+                    option d20
+                    option d100
+            .col-xs-2.col-sm-2
+                button#roll-die.btn.btn-primary.btn-lg.btn-block Roll
+        .row
+            .col
+                <iframe id="character-frame" src="https://drive.google.com/embeddedfolderview?id=0B3r9Ia5N4ca7flFfaTJEV0ZWWVdMTm8zSjNLZzNOYU1yV0oxd3MxczJTc2piMUY2VWthem8#list" width=100% height=220px> ></iframe>
+        .row 
+            .col
+                button#toggle.btn.btn-primary.btn-lg.btn-block Show/Hide Character Sheet List
+        .row#data
+            .col
+                <div id="message-scroll" style="border:1px solid #ccc;font:16px/26px Georgia, Garamond, Serif;overflow:auto;">
+                #messages
+                  .push
+                 </div>
+        .row
+            .col-xs-8.col-sm-8
+                 input(type="text" id="message-box" class="form-control input-lg" placeholder="Write a message here..." rows="3")
+            .col-xs-4.col-sm-4
+                 button#send-message-btn.btn.btn-primary.btn-lg.btn-block Send Message

@@ -1,0 +1,16 @@
+{
+  "name": "TableTopChat",
+  "version": "0.0.0",
+  "description": "ExpressApp1",
+  "main": "app.js",
+  "author": {
+    "name": "APT",
+    "email": ""
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "socket.io": "^1.3.5",
+    "stylus": "*"
+  }
+}
